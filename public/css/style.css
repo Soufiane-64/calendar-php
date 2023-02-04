@@ -1,0 +1,104 @@
+.calendar__table {
+
+    margin: 5px 0;
+    font-size: 0.9em;
+    width: 100%;
+    height: calc(100vh - 128px);
+}
+
+.calendar__table td {
+    padding: 10px;
+    border: 1px solid #CCC;
+    vertical-align: top;
+    width: 14.29%;
+    height: 20%;
+    background-color: #CCCCCC;
+}
+.calendar__table--6weeks td {
+    height: 16.66%;
+}
+
+.calendar__weekday {
+    font-weight: bold;
+    color: #000;
+    font-size: 1em;
+    background-color: #CCCCCC;
+    font-family: Andalus;
+}
+
+.calendar__day {
+    font-size: 1em;
+    background-color: #CCCCCC;
+}
+
+.calendar__othermonth .calendar__day {
+    opacity: 0.8;
+    color: red;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+li,
+button {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: beige;
+    font-style: oblique;
+
+}
+
+header {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #091D3C;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    font-family: Andalus, serif;
+    color: aliceblue;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline;
+    padding: 0 0;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #79B7FF;
+}
+
+button {
+    margin-left: 10px;
+    padding: 9px 12px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    border: none;
+}
+
