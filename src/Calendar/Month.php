@@ -5,7 +5,7 @@ namespace Calendar;
 
 class Month{
 
-    public $days = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag',];
+    public $days = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag'];
     private  $months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
     public $month;
     public $year;
