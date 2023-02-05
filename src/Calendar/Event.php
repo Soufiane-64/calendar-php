@@ -9,6 +9,7 @@ class Event{
     private  $start;
     private $end;
 
+
     public function  getId() : int{
         return $this->id;
     }

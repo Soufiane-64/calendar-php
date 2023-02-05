@@ -1,17 +1,14 @@
 <?php
-require '../src/bootstrap.php';
+require_once '../src/bootstrap.php';
 
-$pdo = get_pdo();
+$pdo = Connexion::getConnect()->getConnection();
 $events = new Calendar\Events($pdo);
-if(!isset($_GET['id'])){
-    header('location: /404.php');
-}
+
 try {
     $event = $events->find($_GET['id']);
 }catch (\Exception $e){
     err();
 }
-
 require '../views/header.php';
 ?>
 

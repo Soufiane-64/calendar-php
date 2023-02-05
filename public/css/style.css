@@ -12,7 +12,6 @@
     vertical-align: top;
     width: 14.29%;
     height: 20%;
-    background-color: #CCCCCC;
 }
 .calendar__table--6weeks td {
     height: 16.66%;
@@ -22,13 +21,11 @@
     font-weight: bold;
     color: #000;
     font-size: 1em;
-    background-color: #CCCCCC;
     font-family: Andalus;
 }
 
 .calendar__day {
     font-size: 1em;
-    background-color: #CCCCCC;
 }
 
 .calendar__othermonth .calendar__day {
@@ -102,3 +99,11 @@ button:hover {
     border: none;
 }
 
+.calendar_highlight{
+    background-color : rgba(0, 136, 169, 0.8) !important;
+}
+.calendar_basic
+{
+    background-color : lightgray !important;
+
+}

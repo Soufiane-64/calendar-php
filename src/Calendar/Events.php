@@ -55,15 +55,14 @@ class Events{
      */
     public function find(int $id) : Event
     {
-        require 'Event.php';
         $statement =  $this->pdo->query("SELECT * FROM events WHERE  id = $id LIMIT 1");
         $statement->setFetchMode(\PDO::FETCH_CLASS,Event::class);
         $result = $statement->fetch();
-
         if($result === false){
             throw new \Exception('Es wurden keine Ergebnisse gefunden');
         }
-        return $result;
+//        new Event($result['id'],$result['name'],$result['description'],$result['start'],$result['end'])
+        return   $result;
     }
 
 }

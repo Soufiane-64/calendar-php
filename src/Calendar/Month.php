@@ -55,10 +55,10 @@ class Month{
     public  function getWeeks() : int {
 
         $start = $this->getStartingDay();
+
         $end   = (clone $start)-> modify('+1 month -1 day');
         $weeks =  intval($end->format('W')) - intval($start->format('W')) + 1;
         if ($weeks < 0){
-
             $weeks =  intval($end->format('W'));
         }
 
@@ -102,6 +102,12 @@ class Month{
             $month = 12;
             $year -= 1;
         }
+        return new Month($month, $year);
+    }
+
+    public function today() : Month {
+        $month = null;
+        $year = null;
         return new Month($month, $year);
     }
 
