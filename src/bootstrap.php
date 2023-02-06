@@ -68,3 +68,11 @@ function h(?string $value) : string{
     }
     return htmlentities($value);
 }
+<<<<<<< HEAD
+=======
+
+function render(string $view, $parameters = [] ){
+    extract($parameters);
+    include "../views/{$view}.php";
+}
+>>>>>>> 466b23e (add ebet interface)

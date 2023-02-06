@@ -9,7 +9,11 @@ try {
 }catch (\Exception $e){
     err();
 }
+<<<<<<< HEAD
 require '../views/header.php';
+=======
+render ('header', ['title' => $event->getName()]);
+>>>>>>> 466b23e (add ebet interface)
 ?>
 
 <h1><?= h($event->getName()); ?></h1>

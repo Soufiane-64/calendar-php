@@ -8,7 +8,11 @@ $today = new Calendar\Month($_GET['month'] ?? null ,$_GET['year'] ?? null);
 $month = new Calendar\Month($_GET['month'] ?? null ,$_GET['year'] ?? null);
 $start = $month->getStartingDay();
 $start = $start->format('N') === '1' ? $start  : $month->getStartingDay()->modify('last Monday');
+<<<<<<< HEAD
 $weeks = $month->getWeeks();
+=======
+$weeks = 6;
+>>>>>>> 466b23e (add ebet interface)
 $end = (clone $start)->modify('+' .(6 + 7 * ($weeks - 1)). ' days') ;
 $events = $events->getEventsBetweenByDay($start,$end);
 
@@ -18,10 +22,16 @@ $t_month = date('m');
 
 require '../views/header.php';
 
+<<<<<<< HEAD
 
 ?>
 
 
+=======
+?>
+
+<div class="calendar">
+>>>>>>> 466b23e (add ebet interface)
 
 <header>
     <h1 class="logo" ><?= $month->toString();?></h1>
@@ -41,7 +51,12 @@ require '../views/header.php';
 </header>
 
 <table class="calendar__table calendar__table--<?= $weeks; ?>weeks">
+<<<<<<< HEAD
     <?php for ($i = 0; $i < $weeks; $i++): ?>
+=======
+    <?php for ($i = 0; $i < $weeks; $i++): ;?>
+
+>>>>>>> 466b23e (add ebet interface)
         <tr>
             <?php foreach($month->days as  $k=> $day):
 
@@ -49,7 +64,13 @@ require '../views/header.php';
                 $eventsForDay = $events[$date->format('Y-m-d')] ?? [];
                 ?>
 
+<<<<<<< HEAD
                 <td class="<?= $month->withinMonth($date) ? (($month->month == intval($t_month) && $month->year == intval($t_year) && intval($date-> format ( 'd'))== intval($t_day) )? 'calendar_highlight':'calendar_basic' ): 'calendar__othermonth' ;?>">
+=======
+                <td class="<?= $month->withinMonth($date) ? (($month->month == intval($t_month)
+                    && $month->year == intval($t_year) && intval($date-> format ( 'd'))== intval($t_day) )?
+                    'calendar_highlight':'calendar_basic' ): 'calendar__othermonth' ;?>">
+>>>>>>> 466b23e (add ebet interface)
                     <?php if ($i === 0): ?>
 
                         <div class="calendar__weekday"><?= $day; ?></div>
@@ -57,7 +78,12 @@ require '../views/header.php';
                     <div class="calendar__day"><?= $date-> format ( 'd'); ?></div>
                     <?php foreach ($eventsForDay as $event): ?>
                         <div class="calendar__event">
+<<<<<<< HEAD
                             <?= (new DateTime($event['start']))->format('H:i')?> - <a href="./event.php?id=<?= $event['id'];?>"><?= h($event['name']);?></a>
+=======
+                            <?= (new DateTime($event['start']))->format('H:i')?>
+                            - <a href="./event.php?id=<?= $event['id'];?>"><?= h($event['name']);?></a>
+>>>>>>> 466b23e (add ebet interface)
                         </div>
                     <?php endforeach;?>
                 </td>
@@ -65,6 +91,16 @@ require '../views/header.php';
         </tr>
     <?php endfor; ?>
 </table>
+<<<<<<< HEAD
+=======
+
+
+
+</div>
+<a href="/add.php" class="calendar__button">+</a>
+
+
+>>>>>>> 466b23e (add ebet interface)
 <?php require '../views/footer.php';?>
 
 
