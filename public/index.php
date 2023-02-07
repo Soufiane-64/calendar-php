@@ -97,7 +97,9 @@ require '../views/header.php';
 
 
 </div>
-<a href="/add.php" class="calendar__button">+</a>
+<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<a href="./add.php" class="calendar__button">+</a>
 
 
 >>>>>>> 466b23e (add ebet interface)

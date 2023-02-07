@@ -61,7 +61,7 @@ class Events{
         if($result === false){
             throw new \Exception('Es wurden keine Ergebnisse gefunden');
         }
-//        new Event($result['id'],$result['name'],$result['description'],$result['start'],$result['end'])
+
         return   $result;
     }
 
